@@ -38,7 +38,7 @@ RUN     git clone https://github.com/APEX-Network/APEX-Blockchain-CLI.git && \
         cd APEX-Blockchain-CLI && \
         git checkout ${CLI_BRANCH} && \
         mkdir libs && \
-        cp /apex/APEX-Blockchain-Core/apex-blockchain-core.jar libs/APEX-Blockchain-Core-${CORE_VERSION}.jar && \
+        cp /apex/apex-blockchain-core.jar libs/APEX-Blockchain-Core-${CORE_VERSION}.jar && \
         gradle shadowJar && \
         cp build/libs/APEX-Blockchain-CLI-${CLI_VERSION}.jar /apex/apex-blockchain-cli.jar
 
