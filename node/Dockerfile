@@ -43,8 +43,8 @@ RUN     git clone https://github.com/APEX-Network/APEX-Blockchain-CLI.git && \
         gradle shadowJar && \
         cp build/libs/APEX-Blockchain-CLI-${CLI_VERSION}.jar apex-blockchain-cli.jar
 
-RUN     wget -O generator-settings.conf https://github.com/yuomii/APEX-Mainnet-Node/blob/master/generator-settings.conf?raw=true && \
-        wget -O configure.sh https://github.com/yuomii/APEX-Mainnet-Node/raw/master/configure.sh?raw=true && \
+RUN     wget -O generator-settings.conf https://github.com/yuomii/APEX-Docker-Test/blob/master/generator-settings.conf?raw=true && \
+        wget -O configure.sh https://github.com/yuomii/APEX-Docker-Test/blob/master/configure.sh?raw=true && \
         chmod +x configure.sh && \
         sh configure.sh -h ${CONF_HOST_IP} -k ${CONF_PRIV_KEY} -t ${CONF_TIMESTAMP} -a ${CONF_PEER_1} -b ${CONF_PEER_2} -n ${CONF_NAME}
 
