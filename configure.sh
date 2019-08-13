@@ -28,42 +28,6 @@ do
    esac
 done
 
-if [ -z "$host" ]
-then
-   echo "You have to pass your public static IP";
-   helpFunction
-fi
-if [ -z "$port" ]
-then
-   echo "You have to a port your node";
-   helpFunction
-fi
-if [ -z "$privKey" ]
-then
-   echo "You have to pass your private key in uncompressed Format";
-   helpFunction
-fi
-if [ -z "$timeStamp" ]
-then
-   echo "You have to pass the timestamp if the genesis block";
-   helpFunction
-fi
-if [ -z "$peer1" ]
-then
-   echo "You have to pass the IP of your first peer node";
-   helpFunction
-fi
-if [ -z "$peer2" ]
-then
-   echo "You have to pass the IP of your second peer node";
-   helpFunction
-fi
-if [ -z "$name" ]
-then
-   echo "You have to pass a name for your node";
-   helpFunction
-fi
-
 mkdir blockchain
 cp generator-settings.conf settings.conf
 sed -i 's/HostIp/'$host'/g' settings.conf
