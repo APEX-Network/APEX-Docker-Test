@@ -7,9 +7,9 @@ services:
       args:
         GRADLE_VERSION: "4.10.3"
         CORE_VERSION: "0.9.2"
-        CORE_BRANCH: "master"
+        CORE_BRANCH: "mainnet"
         CLI_VERSION: "0.9.2"
-        CLI_BRANCH: "mainnet"
+        CLI_BRANCH: "master"
         CONF_TIMESTAMP: "2019-08-28T19:45:00Z"
         CONF_PORT: 9091
         CONF_HOST_IP: 172.28.1.1
@@ -32,9 +32,9 @@ services:
       args:
         GRADLE_VERSION: "4.10.3"
         CORE_VERSION: "0.9.2"
-        CORE_BRANCH: "master"
+        CORE_BRANCH: "mainnet"
         CLI_VERSION: "0.9.2"
-        CLI_BRANCH: "mainnet"
+        CLI_BRANCH: "master"
         CONF_TIMESTAMP: "2019-08-28T19:45:00Z"
         CONF_PORT: 9092
         CONF_HOST_IP: 172.28.1.2
