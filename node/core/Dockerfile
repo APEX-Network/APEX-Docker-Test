@@ -16,10 +16,10 @@ ARG CONF_NAME
 RUN     mkdir -p /apex
 WORKDIR /apex
 
-RUN     apt update -y && \
-        apt install unzip -y && \
-        apt install git -y && \
-        apt install wget
+RUN     apt-get update -y && \
+        apt-get install unzip -y && \
+        apt-get install git -y && \
+        apt-get install wget
 
 RUN     cd /usr/local && \
         curl -L https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o gradle-${GRADLE_VERSION}-bin.zip && \
