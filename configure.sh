@@ -14,11 +14,12 @@ helpFunction()
    exit 1
 }
 
-while getopts "h:p:k:t:a:b:n:" opt
+while getopts "h:p:k:r:t:a:b:n:" opt
 do
    case "$opt" in
       h ) host="$OPTARG" ;;
       p ) port="$OPTARG" ;;
+      r ) rpc="$OPTARG" ;;
       k ) privKey="$OPTARG" ;;
       t ) timeStamp="$OPTARG" ;;
       a ) peer1="$OPTARG" ;;
@@ -32,6 +33,7 @@ mkdir blockchain
 cp generator-settings.conf settings.conf
 sed -i 's/HostIp/'$host'/g' settings.conf
 sed -i 's/Port/'$port'/g' settings.conf
+sed -i 's/Rpc/'$rpc'/g' settings.conf
 sed -i 's/ProducerKey/'$privKey'/g' settings.conf
 sed -i 's/TimeStamp/'$timeStamp'/g' settings.conf
 sed -i 's/YourNodeName/'$name'/g' settings.conf
