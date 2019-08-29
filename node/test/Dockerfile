@@ -8,7 +8,7 @@ RUN     apt-get update -y && \
         apt-get install wget -y && \
         apt-get install maven -y
 
-RUN     git clone https://github.com/yuomii/APEX-Integration-Test.git && \
+RUN     git clone https://github.com/APEX-Network/APEX-Integration-Test.git && \
         cd APEX-Integration-Test && \
         mvn -U clean install && \
         cp target/APEX-Integration-Test-1.0-SNAPSHOT-jar-with-dependencies.jar /apex/test.jar
