@@ -48,4 +48,4 @@ RUN     wget -O generator-settings.conf https://github.com/APEX-Network/APEX-Doc
         chmod +x configure.sh && \
         sh configure.sh -h ${CONF_HOST_IP} -p ${CONF_PORT} -k ${CONF_PRIV_KEY} -t ${CONF_TIMESTAMP} -a ${CONF_PEER_1} -b ${CONF_PEER_2} -n ${CONF_NAME}
 
-CMD [ "java", "-jar", "-Xms512m", "-Xmx4G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseShenandoahGC", "/apex/apex-blockchain-core.jar", "settings.conf" ]
+CMD [ "java", "-jar", "-Xms512m", "-Xmx4G", "/apex/apex-blockchain-core.jar", "settings.conf" ]
