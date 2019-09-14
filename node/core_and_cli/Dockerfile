@@ -46,6 +46,7 @@ RUN     git clone https://github.com/APEX-Network/APEX-Blockchain-CLI.git && \
 
 RUN     wget -O generator-settings.conf https://github.com/APEX-Network/APEX-Docker-Test/blob/master/generator-settings.conf?raw=true && \
         wget -O configure.sh https://github.com/APEX-Network/APEX-Docker-Test/blob/master/configure.sh?raw=true && \
+        wget -O script.txt https://github.com/APEX-Network/APEX-Blockchain-CLI/blob/master/src/main/resources/script.txt?raw=true && \
         chmod +x configure.sh && \
         sh configure.sh -h ${CONF_HOST_IP} -p ${CONF_PORT} -r ${RPC_PORT} -k ${CONF_PRIV_KEY} -t ${CONF_TIMESTAMP} -a ${CONF_PEER_1} -b ${CONF_PEER_2} -n ${CONF_NAME}
 
